@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #0d1b2a;
+    /* Nền xanh đen đậm */
+    /* Ảnh nền vũ trụ mộng mơ */
+    background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2694&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Lớp phủ tối nhẹ */
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* --- BỘ ĐẾM --- */
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.15);
+    /* Trong suốt mờ */
+    backdrop-filter: blur(5px);
+    color: #fff;
+    width: 80px;
+    height: 90px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timer-number {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.timer-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+
+/* --- CẶP ĐÔI --- */
+
+.couple-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.moon-bg {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(174, 198, 207, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    /* Ánh sáng xanh Lưu Ly */
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-frame {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(174, 198, 207, 0.8);
+    /* Viền màu xanh Lưu Ly */
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(174, 198, 207, 0.5);
+    margin-bottom: 10px;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.zodiac {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.heart-icon {
+    font-size: 35px;
+    color: #ff6b81;
+    animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+/* --- HOA RƠI --- */
+
+.petal {
+    position: absolute;
+    top: -20px;
+    border-radius: 100% 0 100% 0;
+    /* Hình dáng cánh hoa */
+    opacity: 0.8;
+    z-index: 5;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100px, 100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* --- BÌNH LUẬN --- */
+
+.comment-section {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comment-input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input-name {
+    flex: 1;
+    min-width: 80px;
+}
+
+
+/* Ô tên */
+
+.input-msg {
+    flex: 2;
+}
+
+
+/* Ô tin nhắn */
+
+button {
+    padding: 0 15px;
+    border-radius: 15px;
+    border: none;
+    background: #779ecb;
+    /* Màu xanh Lưu Ly */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5d8ab9;
+}
+
+.comment-list {
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.comment-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.comment-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.comment-item {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    animation: slideIn 0.3s ease;
+    word-break: break-word;
+}
+
+.comment-item strong {
+    color: #aec6cf;
+    margin-right: 5px;
+}
+
+
+/* Tên màu xanh sáng */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

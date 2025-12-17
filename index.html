@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chờ Đợi Ngày Chung Đôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+    <div id="petals-container"></div>
+
+    <div class="content">
+        <h2 style="margin-bottom: 20px; font-weight: 400; font-size: 16px; opacity: 0.9;">Hẹn ước ngày 20/11/2025</h2>
+
+        <div class="timer-container">
+            <div class="timer-box">
+                <span class="timer-number" id="days">0</span>
+                <span class="timer-label">Ngày</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="hours">0</span>
+                <span class="timer-label">Giờ</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="minutes">0</span>
+                <span class="timer-label">Phút</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="seconds">0</span>
+                <span class="timer-label">Giây</span>
+            </div>
+        </div>
+
+        <div class="couple-container">
+            <div class="moon-bg"></div>
+
+            <div class="person">
+                <div class="avatar-frame">
+                    <img src="https://i.pinimg.com/736x/10/ff/1b/10ff1b32466c6144a39b980eea5dad2a.jpg" alt="Boy">
+                </div>
+                <div class="name">Hữu Phúc</div>
+                <div class="zodiac">Cung Kim Ngưu ♉</div>
+            </div>
+
+            <div class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="person">
+                <div class="avatar-frame">
+                    <img src="https://i.pinimg.com/736x/14/28/4c/14284c83ed2f30d9a5f7d5a9cf7f7105.jpg" alt="Girl">
+                </div>
+                <div class="name">Việt Trinh</div>
+                <div class="zodiac">Cung Song Ngư ♓</div>
+            </div>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment-input-group">
+                <input type="text" id="nameInput" placeholder="Tên của bạn..." class="input-name">
+                <input type="text" id="commentInput" placeholder="Nhập lời chúc..." class="input-msg">
+                <button onclick="addComment()">Gửi ❤️</button>
+            </div>
+            <div class="comment-list" id="commentList">
+                <div class="comment-item">
+                    <strong>Admin:</strong> Cùng đếm những ngày bên nhau nha! 💙
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
