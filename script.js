@@ -1,18 +1,4 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyDwpVjZ4a5yLqLKJyCgT5ACxujkzg8a3j0",
-    authDomain: "countdaycomment.firebaseapp.com",
-    databaseURL: "https://countdaycomment-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "countdaycomment",
-    storageBucket: "countdaycomment.firebasestorage.app",
-    messagingSenderId: "835943916686",
-    appId: "1:835943916686:web:a82411aa3261f6698d15df",
-    measurementId: "G-7VX4FR8M5Y"
-  };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-    
 const targetDate = new Date(2025, 10, 20, 0, 0, 0).getTime(); 
 
 function updateTimer() {
@@ -130,3 +116,4 @@ document.getElementById("commentInput").addEventListener("keypress", function(e)
 document.getElementById("nameInput").addEventListener("keypress", function(e) {
     if (e.key === "Enter") document.getElementById("commentInput").focus();
 });
+
