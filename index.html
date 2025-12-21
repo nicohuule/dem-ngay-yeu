@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodbye...</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <title>Cặp đôi đáng iu<3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="overlay"></div>
-    <div id="particles-container"></div>
+    <div id="petals-container"></div>
 
     <div class="content">
-        <div class="sad-quote">
-            <p class="english">"Goodbye. It was beautiful because of you,<br>but I'm sorry it's broken because of me."</p>
-            <div class="divider"></div>
-        </div>
+        <h2 style="margin-bottom: 20px; font-weight: 400; font-size: 16px; opacity: 0.9;">Hẹn ước ngày 20/11/2025</h2>
 
         <div class="timer-container">
             <div class="timer-box">
@@ -43,35 +38,47 @@
         </div>
 
         <div class="couple-container">
+            <div class="moon-bg"></div>
+
             <div class="person">
                 <div class="avatar-frame">
-                    <img src="https://ui-avatars.com/api/?name=Huu+Phuc&background=random&size=128" alt="Boy">
+                    <img src="https://i.pinimg.com/736x/10/ff/1b/10ff1b32466c6144a39b980eea5dad2a.jpg" alt="Boy">
                 </div>
+                <div class="name">Hữu Phúc</div>
+                <div class="zodiac">Cung Kim Ngưu ♉</div>
             </div>
 
             <div class="heart-icon">
-                <i class="fas fa-heart-broken"></i>
+                <i class="fas fa-heart"></i>
             </div>
 
             <div class="person">
                 <div class="avatar-frame">
-                    <img src="https://ui-avatars.com/api/?name=Viet+Trinh&background=random&size=128" alt="Girl">
+                    <img src="https://i.pinimg.com/736x/14/28/4c/14284c83ed2f30d9a5f7d5a9cf7f7105.jpg" alt="Girl">
                 </div>
+                <div class="name">Việt Trinh</div>
+                <div class="zodiac">Cung Song Ngư ♓</div>
             </div>
         </div>
 
         <div class="comment-section">
             <div class="comment-input-group">
-                <input type="text" id="nameInput" placeholder="Tên..." class="input-name">
-                <input type="text" id="commentInput" placeholder="Nhắn gửi lời cuối..." class="input-msg">
-                <button onclick="addComment()">Gửi</button>
+                <input type="text" id="nameInput" placeholder="Tên của bạn..." class="input-name">
+                <input type="text" id="commentInput" placeholder="Nhập lời chúc..." class="input-msg">
+                <button onclick="addComment()">Gửi ❤️</button>
             </div>
             <div class="comment-list" id="commentList">
+                <div class="comment-item">
+                    <strong>Admin:</strong> Cùng đếm những ngày bên nhau nha! 💙
                 </div>
+            </div>
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
