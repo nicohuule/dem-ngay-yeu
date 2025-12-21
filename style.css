@@ -1,10 +1,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Merriweather', serif; /* Font chữ kiểu tiểu thuyết buồn */
-    background-color: #000;
-    /* Ảnh nền buồn (Mưa hoặc Đen trắng) */
-    background-image: url('https://images.unsplash.com/photo-1493406300581-484b937cdc41?q=80&w=2670&auto=format&fit=crop');
+    font-family: 'Nunito', sans-serif;
+    background-color: #0d1b2a; /* Nền xanh đen đậm */
+    /* Ảnh nền vũ trụ mộng mơ */
+    background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2694&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,14 +14,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #ccc; /* Màu chữ xám nhạt thay vì trắng tinh */
+    color: white;
     position: relative;
 }
 
 .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Phủ tối hơn để nền chìm xuống */
+    background: rgba(0, 0, 0, 0.4); /* Lớp phủ tối nhẹ */
     z-index: 1;
 }
 
@@ -30,155 +30,160 @@ body {
     z-index: 10;
     text-align: center;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
 }
 
-/* --- QUOTE TÂM TRẠNG --- */
-.sad-quote {
-    margin-bottom: 40px;
-    animation: fadeIn 2s ease;
-}
-
-.sad-quote .english {
-    font-size: 18px;
-    font-style: italic;
-    color: #fff;
-    line-height: 1.6;
-    text-shadow: 0 0 10px rgba(255,255,255,0.3);
-}
-
-.divider {
-    width: 50px;
-    height: 1px;
-    background: #555;
-    margin: 15px auto;
-}
-
-/* --- BỘ ĐẾM (TỐI GIẢN) --- */
+/* --- BỘ ĐẾM --- */
 .timer-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 40px;
-    opacity: 0.7; /* Làm mờ bộ đếm đi một chút */
 }
 
 .timer-box {
+    background: rgba(255, 255, 255, 0.15); /* Trong suốt mờ */
+    backdrop-filter: blur(5px);
+    color: #fff;
+    width: 80px;
+    height: 90px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.timer-number { font-size: 24px; font-weight: 300; color: #fff; }
-.timer-label { font-size: 10px; text-transform: uppercase; margin-top: 5px; color: #888; letter-spacing: 1px; }
+.timer-number { font-size: 28px; font-weight: 800; }
+.timer-label { font-size: 12px; text-transform: uppercase; margin-top: 5px; opacity: 0.8; }
 
-/* --- CẶP ĐÔI (ĐEN TRẮNG) --- */
+/* --- CẶP ĐÔI --- */
 .couple-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    filter: grayscale(100%); /* Chuyển toàn bộ ảnh sang đen trắng */
-    opacity: 0.8;
-    transition: opacity 0.5s;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.couple-container:hover {
-    opacity: 1; /* Sáng lên chút khi di chuột vào */
+.moon-bg {
+    position: absolute;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(174, 198, 207, 0.3) 0%, rgba(0,0,0,0) 70%); /* Ánh sáng xanh Lưu Ly */
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.person { display: flex; flex-direction: column; align-items: center; }
 
 .avatar-frame {
-    width: 90px; height: 90px;
+    width: 110px; height: 110px;
     border-radius: 50%;
-    border: 1px solid #555;
+    border: 3px solid rgba(174, 198, 207, 0.8); /* Viền màu xanh Lưu Ly */
     overflow: hidden;
+    box-shadow: 0 0 15px rgba(174, 198, 207, 0.5);
+    margin-bottom: 10px;
 }
 .avatar-frame img { width: 100%; height: 100%; object-fit: cover; }
 
-.heart-icon {
-    font-size: 24px;
-    color: #666; /* Trái tim màu xám */
+.name { font-size: 18px; font-weight: 700; }
+.zodiac {
+    background: rgba(255,255,255,0.2);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    margin-top: 5px;
 }
 
-/* --- HIỆU ỨNG TUYẾT RƠI / TRO TÀN --- */
-.particle {
+.heart-icon {
+    font-size: 35px;
+    color: #ff6b81;
+    animation: beat 1s infinite alternate;
+}
+@keyframes beat { to { transform: scale(1.2); } }
+
+/* --- HOA RƠI --- */
+.petal {
     position: absolute;
-    top: -10px;
-    border-radius: 50%;
-    background: #fff;
-    opacity: 0.5;
+    top: -20px;
+    border-radius: 100% 0 100% 0; /* Hình dáng cánh hoa */
+    opacity: 0.8;
     z-index: 5;
     animation: fall linear infinite;
 }
-
 @keyframes fall {
-    0% { transform: translate(0, 0); opacity: 0; }
-    20% { opacity: 0.8; }
-    100% { transform: translate(20px, 100vh); opacity: 0; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+    100% { transform: translate(100px, 100vh) rotate(360deg); opacity: 0; }
 }
 
 /* --- BÌNH LUẬN --- */
 .comment-section {
-    background: transparent;
-    border-top: 1px solid #333;
-    padding: 20px;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
     width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .comment-input-group {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 input {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid #333;
-    color: #ddd;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
     font-family: inherit;
-    font-size: 13px;
+    font-size: 14px;
 }
-input::placeholder { color: #555; }
-input:focus { outline: none; border-color: #666; }
 
-.input-name { width: 30%; }
-.input-msg { width: 70%; }
+.input-name { flex: 1; min-width: 80px; } /* Ô tên */
+.input-msg { flex: 2; } /* Ô tin nhắn */
 
 button {
-    background: #333;
-    color: #aaa;
-    border: none;
     padding: 0 15px;
-    border-radius: 4px;
+    border-radius: 15px;
+    border: none;
+    background: #779ecb; /* Màu xanh Lưu Ly */
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 12px;
     transition: 0.3s;
 }
-button:hover { background: #555; color: #fff; }
+button:hover { background: #5d8ab9; }
 
 .comment-list {
     max-height: 150px;
     overflow-y: auto;
     text-align: left;
+    padding-right: 5px;
 }
-.comment-list::-webkit-scrollbar { width: 2px; }
-.comment-list::-webkit-scrollbar-thumb { background: #333; }
+.comment-list::-webkit-scrollbar { width: 4px; }
+.comment-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
 
 .comment-item {
-    margin-bottom: 8px;
+    background: rgba(0,0,0,0.4);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
     font-size: 13px;
-    color: #999;
-    border-bottom: 1px solid #222;
-    padding-bottom: 5px;
+    animation: slideIn 0.3s ease;
+    word-break: break-word;
 }
-.comment-item strong { color: #ccc; margin-right: 5px; font-weight: normal; }
+.comment-item strong { color: #aec6cf; margin-right: 5px; } /* Tên màu xanh sáng */
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
