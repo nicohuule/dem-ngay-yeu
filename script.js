@@ -1,10 +1,11 @@
 
-const targetDate = new Date(2025, 10, 20, 0, 0, 0).getTime(); 
+const targetDate = new Date("2025-11-20T00:00:00+07:00").getTime(); 
 
 function updateTimer() {
-    const now = new Date().getTime();
+    const now = new Date().getTime(); // Lấy thời gian hiện tại (UTC ms)
     const distance = targetDate - now;
     
+    // Các phép tính toán học giữ nguyên
     const days = Math.floor(Math.abs(distance) / (1000 * 60 * 60 * 24));
     const hours = Math.floor((Math.abs(distance) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((Math.abs(distance) % (1000 * 60 * 60)) / (1000 * 60));
@@ -116,3 +117,4 @@ document.getElementById("commentInput").addEventListener("keypress", function(e)
 document.getElementById("nameInput").addEventListener("keypress", function(e) {
     if (e.key === "Enter") document.getElementById("commentInput").focus();
 });
+
