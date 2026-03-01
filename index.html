@@ -12,15 +12,6 @@
 
 <body>
 
-    <div id="letterModal" class="modal-overlay">
-        <div class="modal-content">
-            <p class="modal-text">
-                "Cảm ơn thiên thần bé nhỏ đã đến và là món quà tuyệt vời mà Thỏ không bao giờ nhận được lần nữa. Hạnh phúc nhé ! 🩵"
-            </p>
-            <button onclick="closeModal()" class="close-btn">Đóng</button>
-        </div>
-    </div>
-
     <div class="overlay"></div>
     <div id="petals-container"></div>
 
@@ -29,19 +20,19 @@
 
         <div class="timer-container">
             <div class="timer-box">
-                <span class="timer-number">100</span>
+                <span class="timer-number" id="days">0</span>
                 <span class="timer-label">Ngày</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">00</span>
+                <span class="timer-number" id="hours">0</span>
                 <span class="timer-label">Giờ</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">00</span>
+                <span class="timer-number" id="minutes">0</span>
                 <span class="timer-label">Phút</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">00</span>
+                <span class="timer-number" id="seconds">0</span>
                 <span class="timer-label">Giây</span>
             </div>
         </div>
@@ -83,6 +74,9 @@
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <script src="script.js"></script>
 </body>
