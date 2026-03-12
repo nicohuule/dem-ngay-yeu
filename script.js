@@ -1,4 +1,4 @@
-const targetDate = new Date("2026-03-14T00:00:00+07:00").getTime(); 
+const targetDate = new Date("2026-03-13T00:00:00+07:00").getTime(); 
 
 function updateTimer() {
     const now = new Date().getTime(); // Lấy thời gian hiện tại (UTC ms)
@@ -116,3 +116,4 @@ document.getElementById("commentInput").addEventListener("keypress", function(e)
 document.getElementById("nameInput").addEventListener("keypress", function(e) {
     if (e.key === "Enter") document.getElementById("commentInput").focus();
 });
+
