@@ -16,23 +16,23 @@
     <div id="petals-container"></div>
 
     <div class="content">
-        <h2 style="margin-bottom: 20px; font-weight: 400; font-size: 16px; opacity: 0.9;">Chúng mình đã yêu nhau được:</h2>
+        <h2 style="margin-bottom: 20px; font-weight: 400; font-size: 16px; opacity: 0.9;">Hẹn ước ngày 20/11/2025</h2>
 
         <div class="timer-container">
             <div class="timer-box">
-                <span class="timer-number">112</span>
+                <span class="timer-number" id="days">0</span>
                 <span class="timer-label">Ngày</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">12</span>
+                <span class="timer-number" id="hours">0</span>
                 <span class="timer-label">Giờ</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">00</span>
+                <span class="timer-number" id="minutes">0</span>
                 <span class="timer-label">Phút</span>
             </div>
             <div class="timer-box">
-                <span class="timer-number">00</span>
+                <span class="timer-number" id="seconds">0</span>
                 <span class="timer-label">Giây</span>
             </div>
         </div>
@@ -69,16 +69,16 @@
             </div>
             <div class="comment-list" id="commentList">
                 <div class="comment-item">
-                    <strong>Admin:</strong> Cảm ơn 2 bên đã cùng nhau tạo ra website này , mong cho cả 2 sẽ được hạnh phúc và vui vẻ với cuộc sống của mình 🩵
+                    <strong>Admin:</strong> Cùng đếm những ngày bên nhau nha! 💙
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
