@@ -1,4 +1,4 @@
-const targetDate = new Date("9999-11-20T00:00:00+07:00").getTime(); 
+const targetDate = new Date("2025-11-20T00:00:00+07:00").getTime(); 
 
 function updateTimer() {
     const now = new Date().getTime(); // Lấy thời gian hiện tại (UTC ms)
